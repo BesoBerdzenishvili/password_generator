@@ -1,12 +1,7 @@
 import React from "react";
-import Display from "./components/Display";
 
 function App() {
-  return (
-    <div>
-      <Display />
-    </div>
-  );
+  return <div></div>;
 }
 
 export default App;
