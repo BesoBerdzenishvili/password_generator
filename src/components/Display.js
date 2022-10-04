@@ -13,6 +13,7 @@ const Wrapper = styled("div", {
   color: "#3c3b43",
   fontSize: "26px",
   fontWeight: "bolder",
+  marginBottom: "16px",
 });
 
 globalStyles();

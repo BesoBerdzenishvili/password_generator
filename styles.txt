@@ -1,0 +1,8 @@
+Font: <style>@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap');</style>
+font-family: 'Gemunu Libre', sans-serif;
+
+colors:
+#24232b grey
+#3c3b43 darkGrey (for password)
+#100f15 black
+#a4ffaf green
