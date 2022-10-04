@@ -12,5 +12,13 @@ export const {
 } = createStitches({});
 
 export const globalStyles = globalCss({
-  "*": { margin: 0, padding: 0, boxSizing: "border-box" },
+  "*": {
+    margin: 0,
+    padding: 0,
+    boxSizing: "border-box",
+    fontFamily: "Gemunu Libre",
+  },
+  body: {
+    backgroundColor: "#100f15",
+  },
 });
