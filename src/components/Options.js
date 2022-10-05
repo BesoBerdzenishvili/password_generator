@@ -35,7 +35,24 @@ export default function Options() {
   return (
     <Wrapper>
       <Slider />
-      <Checks />
+      <Checks>
+        <label>
+          <input type="checkbox" />
+          Include Uppercase Letters
+        </label>
+        <label>
+          <input type="checkbox" />
+          Include Lowercase Letters
+        </label>
+        <label>
+          <input type="checkbox" />
+          Include Numbers
+        </label>
+        <label>
+          <input type="checkbox" />
+          Include Symbols
+        </label>
+      </Checks>
       <Strength />
       <Btn>Generate &gt;</Btn>
     </Wrapper>
