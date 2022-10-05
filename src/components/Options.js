@@ -1,7 +1,7 @@
 import React from "react";
 import { styled, globalStyles } from "../stitches.config";
 import Slider from "./Slider";
-import Checks from "../Checks";
+import Checks from "./Checks";
 import Strength from "./Strength";
 
 const Wrapper = styled("div", {
