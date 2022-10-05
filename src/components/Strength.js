@@ -37,7 +37,7 @@ const Label = styled("p", {
   color: "#3c3b43",
 });
 
-export default function Strength({ passwordLength = "17" }) {
+export default function Strength({ passwordLength = "12" }) {
   let blocks = [];
   let colorValue;
 

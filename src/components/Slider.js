@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { styled } from "../stitches.config";
 
 const Range = styled("div", {
@@ -32,9 +32,7 @@ const Wrapper = styled("div", {
   },
 });
 
-export default function Slider() {
-  const [slide, setSlide] = useState(12);
-
+export default function Slider({ slide, setSlide }) {
   return (
     <div>
       <Wrapper>
