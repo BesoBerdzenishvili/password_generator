@@ -31,25 +31,50 @@ const Btn = styled("button", {
 
 globalStyles();
 
-export default function Options() {
+export default function Options({
+  uppercase,
+  setUppercase,
+  lowercase,
+  setLowercase,
+  numbers,
+  setNumbers,
+  symbols,
+  setSymbols,
+}) {
   return (
     <Wrapper>
       <Slider />
       <Checks>
         <label>
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            checked={uppercase}
+            onChange={() => setUppercase(!uppercase)}
+          />
           Include Uppercase Letters
         </label>
         <label>
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            checked={lowercase}
+            onChange={() => setLowercase(!lowercase)}
+          />
           Include Lowercase Letters
         </label>
         <label>
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            checked={numbers}
+            onChange={() => setNumbers(!numbers)}
+          />
           Include Numbers
         </label>
         <label>
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            checked={symbols}
+            onChange={() => setSymbols(!symbols)}
+          />
           Include Symbols
         </label>
       </Checks>
