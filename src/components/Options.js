@@ -2,6 +2,7 @@ import React from "react";
 import { styled, globalStyles } from "../stitches.config";
 import Slider from "./Slider";
 import Checks from "../Checks";
+import Strength from "./Strength";
 
 const Wrapper = styled("div", {
   display: "flex",
@@ -35,6 +36,7 @@ export default function Options() {
     <Wrapper>
       <Slider />
       <Checks />
+      <Strength />
       <Btn>Generate &gt;</Btn>
     </Wrapper>
   );
