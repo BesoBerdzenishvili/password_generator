@@ -16,11 +16,15 @@ const Wrapper = styled("div", {
   marginBottom: "16px",
 });
 
+const DisplayText = styled("p", {
+  overflow: "auto",
+});
+
 globalStyles();
 export default function Display({ password = "P4$W0rD!" }) {
   return (
     <Wrapper>
-      <p>{password}</p>
+      <DisplayText>{password}</DisplayText>
       <CopyBtn text={password} />
     </Wrapper>
   );
