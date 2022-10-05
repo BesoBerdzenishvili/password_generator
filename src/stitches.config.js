@@ -17,6 +17,7 @@ export const globalStyles = globalCss({
     padding: 0,
     boxSizing: "border-box",
     fontFamily: "Gemunu Libre",
+    letterSpacing: "1.5px",
   },
   body: {
     backgroundColor: "#100f15",
