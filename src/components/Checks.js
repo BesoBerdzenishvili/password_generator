@@ -8,31 +8,11 @@ const Wrapper = styled("div", {
   padding: "18px 18px",
   color: "white",
   width: "384px",
+  "& input": {
+    margin: "0 7px 11px 0",
+  },
 });
 
-const Check = styled("input", {
-  margin: "0 7px 11px 0",
-});
-
-export default function Checks() {
-  return (
-    <Wrapper>
-      <label>
-        <Check type="checkbox" />
-        Include Uppercase Letters
-      </label>
-      <label>
-        <Check type="checkbox" />
-        Include Lowercase Letters
-      </label>
-      <label>
-        <Check type="checkbox" />
-        Include Numbers
-      </label>
-      <label>
-        <Check type="checkbox" />
-        Include Symbols
-      </label>
-    </Wrapper>
-  );
+export default function Checks({ children }) {
+  return <Wrapper>{children}</Wrapper>;
 }
