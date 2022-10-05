@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { styled, globalStyles } from "../stitches.config";
 import Slider from "./Slider";
 import Checks from "./Checks";
@@ -41,9 +41,10 @@ export default function Options({
   symbols,
   setSymbols,
 }) {
+  const [sliderValue, setSliderValue] = useState(12);
   return (
     <Wrapper>
-      <Slider />
+      <Slider slide={sliderValue} setSlide={setSliderValue} />
       <Checks>
         <label>
           <input
@@ -78,7 +79,7 @@ export default function Options({
           Include Symbols
         </label>
       </Checks>
-      <Strength />
+      <Strength passwordLength={sliderValue} />
       <Btn>Generate &gt;</Btn>
     </Wrapper>
   );
