@@ -40,6 +40,10 @@ export default function Options({ setPassword }) {
   const [symbols, setSymbols] = useState(false);
 
   const handleClick = () => {
+    if (!uppercase && !lowercase && !numbers && !symbols) {
+      setUppercase(true);
+      alert("at least on option must be true");
+    }
     let password = generatePassword(
       sliderValue,
       uppercase,
