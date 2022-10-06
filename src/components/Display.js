@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { styled, globalStyles } from "../stitches.config";
+import CopyAlert from "./CopyAlert";
 import CopyBtn from "./CopyBtn";
 
 const Wrapper = styled("div", {
@@ -22,10 +23,16 @@ const DisplayText = styled("p", {
 
 globalStyles();
 export default function Display({ password }) {
+  const [showMessage, setShowMessage] = useState(false);
   return (
     <Wrapper>
+      {showMessage && <CopyAlert message={password} />}
       <DisplayText>{password}</DisplayText>
-      <CopyBtn text={password} />
+      <CopyBtn
+        text={password}
+        setShowMessage={setShowMessage}
+        showMessage={showMessage}
+      />
     </Wrapper>
   );
 }
