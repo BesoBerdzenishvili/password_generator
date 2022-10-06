@@ -21,14 +21,7 @@ const DisplayText = styled("p", {
 });
 
 globalStyles();
-export default function Display({
-  password = "P4$W0rD!",
-  uppercase,
-  lowercase,
-  symbols,
-  numbers,
-}) {
-  console.log(uppercase, lowercase, symbols, numbers);
+export default function Display({ password }) {
   return (
     <Wrapper>
       <DisplayText>{password}</DisplayText>
