@@ -18,31 +18,13 @@ const Title = styled("p", {
 });
 
 function App() {
-  const [uppercase, setUppercase] = useState(false);
-  const [lowercase, setLowercase] = useState(false);
-  const [numbers, setNumbers] = useState(false);
-  const [symbols, setSymbols] = useState(false);
-  console.log(symbols, "symbols", numbers, "numbers");
+  const [password, setPassword] = useState("P4$5W0rD!");
 
   return (
     <Wrapper>
       <Title>Password Generator</Title>
-      <Display
-        uppercase={uppercase}
-        lowercase={lowercase}
-        numbers={numbers}
-        symbols={symbols}
-      />
-      <Options
-        uppercase={uppercase}
-        setUppercase={setUppercase}
-        lowercase={lowercase}
-        setLowercase={setLowercase}
-        numbers={numbers}
-        setNumbers={setNumbers}
-        symbols={symbols}
-        setSymbols={setSymbols}
-      />
+      <Display password={password} />
+      <Options setPassword={setPassword} />
     </Wrapper>
   );
 }

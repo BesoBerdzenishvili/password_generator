@@ -13,6 +13,50 @@ const Wrapper = styled("div", {
   },
 });
 
-export default function Checks({ children }) {
-  return <Wrapper>{children}</Wrapper>;
+export default function Checks({
+  uppercase,
+  setUppercase,
+  lowercase,
+  setLowercase,
+  numbers,
+  setNumbers,
+  symbols,
+  setSymbols,
+}) {
+  return (
+    <Wrapper>
+      <label>
+        <input
+          type="checkbox"
+          checked={uppercase}
+          onChange={() => setUppercase(!uppercase)}
+        />
+        Include Uppercase Letters
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          checked={lowercase}
+          onChange={() => setLowercase(!lowercase)}
+        />
+        Include Lowercase Letters
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          checked={numbers}
+          onChange={() => setNumbers(!numbers)}
+        />
+        Include Numbers
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          checked={symbols}
+          onChange={() => setSymbols(!symbols)}
+        />
+        Include Symbols
+      </label>
+    </Wrapper>
+  );
 }

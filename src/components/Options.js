@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { styled, globalStyles } from "../stitches.config";
+import { generatePassword } from "./passwordGenerator";
 import Slider from "./Slider";
 import Checks from "./Checks";
 import Strength from "./Strength";
@@ -31,56 +32,38 @@ const Btn = styled("button", {
 
 globalStyles();
 
-export default function Options({
-  uppercase,
-  setUppercase,
-  lowercase,
-  setLowercase,
-  numbers,
-  setNumbers,
-  symbols,
-  setSymbols,
-}) {
+export default function Options({ setPassword }) {
   const [sliderValue, setSliderValue] = useState(12);
+  const [uppercase, setUppercase] = useState(true);
+  const [lowercase, setLowercase] = useState(false);
+  const [numbers, setNumbers] = useState(false);
+  const [symbols, setSymbols] = useState(false);
+
+  const handleClick = () => {
+    let password = generatePassword(
+      sliderValue,
+      uppercase,
+      lowercase,
+      numbers,
+      symbols
+    );
+    setPassword(password);
+  };
   return (
     <Wrapper>
       <Slider slide={sliderValue} setSlide={setSliderValue} />
-      <Checks>
-        <label>
-          <input
-            type="checkbox"
-            checked={uppercase}
-            onChange={() => setUppercase(!uppercase)}
-          />
-          Include Uppercase Letters
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            checked={lowercase}
-            onChange={() => setLowercase(!lowercase)}
-          />
-          Include Lowercase Letters
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            checked={numbers}
-            onChange={() => setNumbers(!numbers)}
-          />
-          Include Numbers
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            checked={symbols}
-            onChange={() => setSymbols(!symbols)}
-          />
-          Include Symbols
-        </label>
-      </Checks>
+      <Checks
+        uppercase={uppercase}
+        setUppercase={setUppercase}
+        lowercase={lowercase}
+        setLowercase={setLowercase}
+        numbers={numbers}
+        setNumbers={setNumbers}
+        symbols={symbols}
+        setSymbols={setSymbols}
+      />
       <Strength passwordLength={sliderValue} />
-      <Btn>Generate &gt;</Btn>
+      <Btn onClick={handleClick}>Generate &gt;</Btn>
     </Wrapper>
   );
 }
