@@ -14,10 +14,15 @@ const Btn = styled("button", {
   },
 });
 
-export default function CopyBtn({ text }) {
+export default function CopyBtn({ text, setShowMessage }) {
   const copy = async () => {
     await navigator.clipboard.writeText(text);
-    alert(`${text} copied!`);
+
+    setShowMessage(true);
+
+    setTimeout(() => {
+      setShowMessage(false);
+    }, 1500);
   };
   return (
     <Btn onClick={copy} disabled={!text}>
