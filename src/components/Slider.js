@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "../stitches.config";
 
-const Range = styled("div", {
+const RangeSlider = styled("div", {
   padding: "1.2px 0",
   width: "344px",
   margin: "18px 0",
@@ -39,7 +39,7 @@ export default function Slider({ slide, setSlide }) {
         <p>Character Lenght</p>
         <p className="CharacterLenght">{slide}</p>
       </Wrapper>
-      <Range>
+      <RangeSlider>
         <input
           type="range"
           min="2"
@@ -47,7 +47,7 @@ export default function Slider({ slide, setSlide }) {
           value={slide}
           onChange={(e) => setSlide(e.target.value)}
         />
-      </Range>
+      </RangeSlider>
     </div>
   );
 }

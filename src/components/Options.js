@@ -3,7 +3,7 @@ import { styled, globalStyles } from "../stitches.config";
 import { generatePassword } from "./passwordGenerator";
 import Slider from "./Slider";
 import Checks from "./Checks";
-import Strength from "./Strength";
+import PasswordStrength from "./PasswordStrength";
 
 const Wrapper = styled("div", {
   display: "flex",
@@ -14,7 +14,7 @@ const Wrapper = styled("div", {
   width: "384px",
 });
 
-const Btn = styled("button", {
+const Button = styled("button", {
   textAlign: "center",
   backgroundColor: "#a4ffaf",
   color: "#24232b",
@@ -66,8 +66,8 @@ export default function Options({ setPassword }) {
         symbols={symbols}
         setSymbols={setSymbols}
       />
-      <Strength passwordLength={sliderValue} />
-      <Btn onClick={handleClick}>Generate &gt;</Btn>
+      <PasswordStrength passwordLength={sliderValue} />
+      <Button onClick={handleClick}>Generate &gt;</Button>
     </Wrapper>
   );
 }

@@ -1,8 +1,8 @@
 import React from "react";
 import { styled } from "../stitches.config";
-import copyImg from "../images/copy.png";
+import copyImg from "../images/copyBtn.png";
 
-const Btn = styled("button", {
+const Button = styled("button", {
   backgroundColor: "transparent",
   border: "none",
   cursor: "pointer",
@@ -25,8 +25,8 @@ export default function CopyBtn({ text, setShowMessage }) {
     }, 1500);
   };
   return (
-    <Btn onClick={copy} disabled={!text}>
+    <Button onClick={copy} disabled={!text}>
       <img src={copyImg} alt="two papers" width="24px" />
-    </Btn>
+    </Button>
   );
 }
