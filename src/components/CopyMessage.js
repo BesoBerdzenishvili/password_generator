@@ -13,6 +13,6 @@ const Wrapper = styled("div", {
   fontSize: "24px",
 });
 
-export default function CopyAlert({ message }) {
-  return <Wrapper>{message} has been copied!</Wrapper>;
+export default function CopyAlert({ text }) {
+  return <Wrapper>{text} has been copied!</Wrapper>;
 }
