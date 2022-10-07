@@ -26,7 +26,7 @@ export default function Display({ password }) {
   const [showMessage, setShowMessage] = useState(false);
   return (
     <Wrapper>
-      {showMessage && <CopyMessage message={password} />}
+      {showMessage && <CopyMessage text={password} />}
       <DisplayPassword>{password}</DisplayPassword>
       <CopyBtn
         text={password}
