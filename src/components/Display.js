@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { styled, globalStyles } from "../stitches.config";
+import { styled } from "../stitches.config";
 import CopyMessage from "./CopyMessage";
 import CopyBtn from "./CopyBtn";
 
@@ -21,7 +21,6 @@ const DisplayPassword = styled("p", {
   overflow: "auto",
 });
 
-globalStyles();
 export default function Display({ password }) {
   const [showMessage, setShowMessage] = useState(false);
   return (
