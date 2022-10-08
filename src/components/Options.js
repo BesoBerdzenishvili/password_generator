@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { styled, globalStyles } from "../stitches.config";
+import { styled } from "../stitches.config";
 import { generatePassword } from "./passwordGenerator";
 import Slider from "./Slider";
 import Checks from "./Checks";
@@ -29,8 +29,6 @@ const Button = styled("button", {
     left: "2px",
   },
 });
-
-globalStyles();
 
 export default function Options({ setPassword }) {
   const [sliderValue, setSliderValue] = useState(12);
