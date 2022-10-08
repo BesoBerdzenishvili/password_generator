@@ -21,15 +21,14 @@ const Wrapper = styled("div", {
   backgroundColor: "#100f15",
 
   variants: {
-    wrap: {
-      component: {
+    component: {
+      true: {
         padding: "18px 18px",
         width: "344px",
         marginBottom: "21px",
         justifyContent: "space-between",
       },
     },
-    block: {},
   },
 });
 
@@ -61,9 +60,9 @@ export default function Strength({ passwordLength = "12" }) {
     colorValue = "strong";
   }
   return (
-    <Wrapper wrap="component">
+    <Wrapper component>
       <Label>STRENGTH</Label>
-      <Wrapper wrap="block">
+      <Wrapper>
         {blocks.map((i) => (
           <Block key={i} color={colorValue} />
         ))}
