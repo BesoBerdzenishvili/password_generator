@@ -11,7 +11,7 @@ const Wrapper = styled("div", {
   alignItems: "center",
   backgroundColor: "#24232b",
   padding: "18px 18px",
-  width: "384px",
+  maxWidth: "384px",
 });
 
 const Button = styled("button", {
@@ -19,7 +19,8 @@ const Button = styled("button", {
   backgroundColor: "#a4ffaf",
   color: "#24232b",
   padding: "18px 18px",
-  width: "344px",
+  maxWidth: "344px",
+  width: "100%",
   fontSize: "19px",
   fontWeight: "bolder",
   cursor: "pointer",
