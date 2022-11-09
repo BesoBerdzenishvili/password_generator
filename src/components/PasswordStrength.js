@@ -4,7 +4,7 @@ import { styled } from "../stitches.config";
 const Block = styled("div", {
   backgroundColor: "transparent",
   height: "21px",
-  width: "9px",
+  padding: "0 3px",
   marginRight: "6px",
 
   variants: {
@@ -24,7 +24,8 @@ const Wrapper = styled("div", {
     component: {
       true: {
         padding: "18px 18px",
-        width: "344px",
+        maxWidth: "344px",
+        width: "100%",
         marginBottom: "21px",
         justifyContent: "space-between",
       },
