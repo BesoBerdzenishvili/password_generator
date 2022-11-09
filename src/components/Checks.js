@@ -5,10 +5,9 @@ const Wrapper = styled("div", {
   display: "flex",
   flexDirection: "column",
   justifySelf: "flex-start",
-  margin: "18px 0",
+  padding: "18px 18px",
   color: "white",
-  maxWidth: "384px",
-  width: "100%",
+  width: "384px",
   "& input": {
     margin: "0 7px 11px 0",
   },
