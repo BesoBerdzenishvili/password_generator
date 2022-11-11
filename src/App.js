@@ -4,6 +4,8 @@ import Options from "./components/Options";
 import Display from "./components/Display";
 
 const Wrapper = styled("div", {
+  maxWidth: "384px",
+  width: "100%",
   position: "absolute",
   top: "50%",
   left: "50%",
