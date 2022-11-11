@@ -11,8 +11,15 @@ const Wrapper = styled("div", {
   left: 0,
   textAlign: "center",
   fontSize: "24px",
+  "& span": {
+    color: "magenta",
+  },
 });
 
 export default function CopyAlert({ text }) {
-  return <Wrapper>{text} has been copied!</Wrapper>;
+  return (
+    <Wrapper>
+      <span>{text}</span> has been copied!
+    </Wrapper>
+  );
 }

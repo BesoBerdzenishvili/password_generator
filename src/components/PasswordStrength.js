@@ -41,31 +41,31 @@ export default function Strength({ passwordLength = "12" }) {
   let blocks = [];
   let colorValue;
 
-  if (passwordLength < 4) {
-    blocks = [1, 2, 3];
-  } else if (passwordLength >= 4 && passwordLength < 8) {
-    blocks = [1, 2, 3, 4, 5, 6];
-  } else if (passwordLength >= 8 && passwordLength < 12) {
-    blocks = [1, 2, 3, 4, 5, 6, 7, 8];
-  } else if (passwordLength >= 12 && passwordLength < 16) {
-    blocks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  } else if (passwordLength >= 16) {
-    blocks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
-  }
+  const addBlocks = (stop, length) => {
+    if (stop < length && stop < 15) {
+      stop += 1;
+      blocks.push(1);
+      addBlocks(stop, length);
+    } else {
+      return blocks;
+    }
+  };
 
-  if (passwordLength < 8) {
+  addBlocks(0, passwordLength);
+
+  if (passwordLength < 5) {
     colorValue = "weak";
-  } else if (passwordLength >= 8 && passwordLength < 16) {
+  } else if (passwordLength >= 5 && passwordLength < 9) {
     colorValue = "normal";
-  } else if (passwordLength > 16) {
+  } else if (passwordLength >= 9) {
     colorValue = "strong";
   }
   return (
     <Wrapper component>
       <Label>STRENGTH</Label>
       <Wrapper>
-        {blocks.map((i) => (
-          <Block key={i} color={colorValue} />
+        {blocks.map((i, index) => (
+          <Block key={i + index} color={colorValue} />
         ))}
       </Wrapper>
     </Wrapper>
