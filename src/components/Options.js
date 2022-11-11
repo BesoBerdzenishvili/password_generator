@@ -11,7 +11,6 @@ const Wrapper = styled("div", {
   alignItems: "center",
   backgroundColor: "#24232b",
   padding: "18px 18px",
-  maxWidth: "384px",
 });
 
 const Button = styled("button", {
@@ -54,7 +53,7 @@ export default function Options({ setPassword }) {
   };
   return (
     <Wrapper>
-      <Slider slide={sliderValue} setSlide={setSliderValue} />
+      <Slider sliderValue={sliderValue} setSliderValue={setSliderValue} />
       <Checks
         uppercase={uppercase}
         setUppercase={setUppercase}

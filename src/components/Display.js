@@ -9,8 +9,6 @@ const Wrapper = styled("div", {
   alignItems: "center",
   backgroundColor: "#24232b",
   padding: "0 18px",
-  maxWidth: "384px",
-  width: "100%",
   height: "58px",
   color: "#3c3b43",
   fontSize: "26px",
