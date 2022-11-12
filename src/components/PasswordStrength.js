@@ -41,13 +41,11 @@ export default function Strength({ passwordLength = "12" }) {
   let blocks = [];
   let colorValue;
 
-  const addBlocks = (stop, length) => {
-    if (stop < length && stop < 15) {
-      stop += 1;
+  const addBlocks = (i, stopCondition) => {
+    if (i < stopCondition && i < 15) {
+      i += 1;
       blocks.push(1);
-      addBlocks(stop, length);
-    } else {
-      return blocks;
+      addBlocks(i, stopCondition);
     }
   };
 
