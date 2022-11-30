@@ -1,7 +1,12 @@
 import React, { useState } from "react";
-import { styled } from "./stitches.config";
+import { styled, keyframes } from "./stitches.config";
 import Options from "./components/Options";
 import Display from "./components/Display";
+
+const wrapperAnimation = keyframes({
+  from: { opacity: 0, top: "70%" },
+  to: { opacity: 1, top: "50%" },
+});
 
 const Wrapper = styled("div", {
   maxWidth: "384px",
@@ -10,6 +15,7 @@ const Wrapper = styled("div", {
   top: "50%",
   left: "50%",
   transform: "translate(-50%,-50%)",
+  animation: `${wrapperAnimation} 2s`,
 });
 
 const Title = styled("p", {
