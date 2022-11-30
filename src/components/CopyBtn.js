@@ -22,7 +22,7 @@ export default function CopyBtn({ text, setShowMessage }) {
 
     setTimeout(() => {
       setShowMessage(false);
-    }, 1500);
+    }, 1900);
   };
   return (
     <Button onClick={copy} disabled={!text}>
